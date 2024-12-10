@@ -10,6 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the entire project code into the container
 COPY . .
+RUN unzip spotify-dataset.zip
 
 # Expose port 8080 (default for Cloud Run)
 EXPOSE 8080
